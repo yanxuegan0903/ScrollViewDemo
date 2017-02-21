@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "XGScrollView.h"
-#import "XGCollectionView.h"
 
 
 
@@ -31,11 +30,6 @@
         NSLog(@"文件不存在");
         return;
     }
-    
-    
-//    XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) dataSource:@[image1,image2,image3]];
-//    [self.view addSubview:collectionView];
-    
     
     
     
