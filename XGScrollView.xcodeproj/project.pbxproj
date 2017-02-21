@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B054E16278153E2C02DBED8 /* libPods-XGScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2878F86A2DBBE886E792EE /* libPods-XGScrollView.a */; };
 		A7E9419F1E5BCD9600709D62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9419E1E5BCD9600709D62 /* main.m */; };
 		A7E941A21E5BCD9600709D62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941A11E5BCD9600709D62 /* AppDelegate.m */; };
 		A7E941A51E5BCD9600709D62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941A41E5BCD9600709D62 /* ViewController.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		999ECF0170CC9826161F7296 /* Pods-XGScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView.release.xcconfig"; sourceTree = "<group>"; };
 		A7E9419A1E5BCD9600709D62 /* XGScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XGScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9419E1E5BCD9600709D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7E941A01E5BCD9600709D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		A7E941DB1E5BE7C400709D62 /* XGCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGCollectionView.m; sourceTree = "<group>"; };
 		A7E941DD1E5BE7E900709D62 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		A7E941DE1E5BE7E900709D62 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		BD2878F86A2DBBE886E792EE /* libPods-XGScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XGScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA722822D1076ED37CDC8179 /* Pods-XGScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B054E16278153E2C02DBED8 /* libPods-XGScrollView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097E40193174846509FEBB73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA722822D1076ED37CDC8179 /* Pods-XGScrollView.debug.xcconfig */,
+				999ECF0170CC9826161F7296 /* Pods-XGScrollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		43EBA8B48BB97797101204B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD2878F86A2DBBE886E792EE /* libPods-XGScrollView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A7E941911E5BCD9600709D62 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +122,8 @@
 				A7E941B61E5BCD9600709D62 /* XGScrollViewTests */,
 				A7E941C11E5BCD9600709D62 /* XGScrollViewUITests */,
 				A7E9419B1E5BCD9600709D62 /* Products */,
+				097E40193174846509FEBB73 /* Pods */,
+				43EBA8B48BB97797101204B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7E941C71E5BCD9600709D62 /* Build configuration list for PBXNativeTarget "XGScrollView" */;
 			buildPhases = (
+				4FD56383BED2FA239135E10A /* [CP] Check Pods Manifest.lock */,
 				A7E941961E5BCD9600709D62 /* Sources */,
 				A7E941971E5BCD9600709D62 /* Frameworks */,
 				A7E941981E5BCD9600709D62 /* Resources */,
+				C5BD59FF9069C85FCF7C9EA3 /* [CP] Embed Pods Frameworks */,
+				ADEAC95808E8E45015AD058D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,6 +324,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FD56383BED2FA239135E10A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADEAC95808E8E45015AD058D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5BD59FF9069C85FCF7C9EA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7E941961E5BCD9600709D62 /* Sources */ = {
@@ -455,6 +530,7 @@
 		};
 		A7E941C81E5BCD9600709D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA722822D1076ED37CDC8179 /* Pods-XGScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U54J3QSAHN;
@@ -467,6 +543,7 @@
 		};
 		A7E941C91E5BCD9600709D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999ECF0170CC9826161F7296 /* Pods-XGScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U54J3QSAHN;
