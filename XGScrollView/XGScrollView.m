@@ -51,33 +51,33 @@
 
 - (void)initUI{
     
-//    //第一张图片(向前拖拽，为了循环，第一张图应该和显示的最后一张图一样)
-//    UIImageView *firstImage = [[UIImageView alloc] initWithImage:[self.images lastObject]];
-//    firstImage.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-//    [self addSubview:firstImage];
-//    
-//    //最后一张图片(向后拖拽，为了循环，最后一张图应该和显示的第一张图一样)
-//    UIImageView *lastImage = [[UIImageView alloc] initWithImage:[self.images firstObject]];
-//    lastImage.frame = CGRectMake(([self.images count] + 1) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
-//    [self addSubview:lastImage];
-//    
-//    //第二张图 → 倒数第二张图
-//    for (NSInteger i = 0; i < [self.images count]; i++) {
-//        UIImageView *imageView = [[UIImageView alloc] initWithImage:[self.images objectAtIndex:i]];
-//        imageView.frame = CGRectMake(self.frame.size.width * (i + 1), 0, self.frame.size.width, self.frame.size.height);
-//        [self addSubview:imageView];
-//    }
-//    
+    //第一张图片(向前拖拽，为了循环，第一张图应该和显示的最后一张图一样)
+    UIImageView *firstImage = [[UIImageView alloc] initWithImage:[self.images lastObject]];
+    firstImage.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    [self addSubview:firstImage];
     
+    //最后一张图片(向后拖拽，为了循环，最后一张图应该和显示的第一张图一样)
+    UIImageView *lastImage = [[UIImageView alloc] initWithImage:[self.images firstObject]];
+    lastImage.frame = CGRectMake(([self.images count] + 1) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
+    [self addSubview:lastImage];
+    
+    //第二张图 → 倒数第二张图
     for (NSInteger i = 0; i < [self.images count]; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[self.images objectAtIndex:i]];
-        imageView.frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height);
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.frame = CGRectMake(self.frame.size.width * (i + 1), 0, self.frame.size.width, self.frame.size.height);
         [self addSubview:imageView];
     }
     
-    self.contentOffset = CGPointMake(0, 0);
-    self.contentSize = CGSizeMake(self.frame.size.width * [self.images count], self.frame.size.height);
+    
+//    for (NSInteger i = 0; i < [self.images count]; i++) {
+//        UIImageView *imageView = [[UIImageView alloc] initWithImage:[self.images objectAtIndex:i]];
+//        imageView.frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height);
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        [self addSubview:imageView];
+//    }
+    
+    self.contentOffset = CGPointMake(self.frame.size.width, 0);
+    self.contentSize = CGSizeMake(self.frame.size.width * ([self.images count]+2), self.frame.size.height);
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
     self.pagingEnabled = YES;
@@ -102,15 +102,19 @@
 
 - (void)nextPage{
     
-    CGPoint lastImagePoint = CGPointMake(([self.images count]-1)*self.frame.size.width, 0);
-    
-    if (self.contentOffset.x == lastImagePoint.x) {
-        //  已经是最后一张
-        NSLog(@"已经是最后一张,直接跳到第一张");
-//        [self scrollRectToVisible:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) animated:YES];
-        [self setContentOffset:CGPointMake(0, 0) animated:YES];
-        return ;
-    }
+//    CGPoint lastImagePoint = CGPointMake(([self.images count])*self.frame.size.width, 0);
+//    
+//    if (self.contentOffset.x == lastImagePoint.x) {
+//        //  已经是最后一张
+//        NSLog(@"已经是最后一张,直接跳到第一张");
+////        [self scrollRectToVisible:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) animated:YES];
+//        [self setContentOffset:CGPointMake(self.frame.size.width, 0) animated:NO];
+//        return ;
+//    }else if (self.contentOffset.x == 0){
+//        NSLog(@"现在是第一张，跳到倒数第二张");
+//        [self setContentOffset:CGPointMake(self.frame.size.width*self.images.count, 0) animated:NO];
+//        return ;
+//    }
     
     
     [self scrollRectToVisible:CGRectMake(self.contentOffset.x + self.frame.size.width , 0, self.frame.size.width, self.frame.size.width) animated:YES];
@@ -119,6 +123,20 @@
 }
 
 
+- (void)scrollViewDidFinish{
+    
+    CGPoint lastImagePoint = CGPointMake(([self.images count]+1)*self.frame.size.width, 0);
+    
+    if (self.contentOffset.x == lastImagePoint.x) {
+        //  已经是最后一张
+        NSLog(@"已经是最后一张,直接跳到第二张");
+        //        [self scrollRectToVisible:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) animated:YES];
+        [self setContentOffset:CGPointMake(self.frame.size.width, 0) animated:NO];
+    }else if (self.contentOffset.x == 0){
+        NSLog(@"现在是第一张，跳到倒数第二张");
+        [self setContentOffset:CGPointMake(self.frame.size.width*self.images.count, 0) animated:NO];
+    }
+}
 
 
 #pragma mark - ScrollViewDelegate
@@ -145,11 +163,13 @@
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     NSLog(@"滚动动画 已经完成");
+    [self scrollViewDidFinish];
 }
 
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSLog(@"滚动停止");
+    [self scrollViewDidFinish];
 }
 
 

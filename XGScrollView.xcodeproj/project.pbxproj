@@ -19,6 +19,8 @@
 		A7E941D61E5BD42A00709D62 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D31E5BD42A00709D62 /* 3.jpeg */; };
 		A7E941D71E5BD42A00709D62 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D41E5BD42A00709D62 /* 2.jpeg */; };
 		A7E941D81E5BD42A00709D62 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D51E5BD42A00709D62 /* 1.jpeg */; };
+		A7E941DC1E5BE7C400709D62 /* XGCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941DB1E5BE7C400709D62 /* XGCollectionView.m */; };
+		A7E941DF1E5BE7E900709D62 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941DE1E5BE7E900709D62 /* ImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		A7E941D31E5BD42A00709D62 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		A7E941D41E5BD42A00709D62 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		A7E941D51E5BD42A00709D62 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		A7E941DA1E5BE7C400709D62 /* XGCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGCollectionView.h; sourceTree = "<group>"; };
+		A7E941DB1E5BE7C400709D62 /* XGCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGCollectionView.m; sourceTree = "<group>"; };
+		A7E941DD1E5BE7E900709D62 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		A7E941DE1E5BE7E900709D62 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 				A7E941A41E5BCD9600709D62 /* ViewController.m */,
 				A7E941D01E5BCE0F00709D62 /* XGScrollView.h */,
 				A7E941D11E5BCE0F00709D62 /* XGScrollView.m */,
+				A7E941DA1E5BE7C400709D62 /* XGCollectionView.h */,
+				A7E941DB1E5BE7C400709D62 /* XGCollectionView.m */,
+				A7E941DD1E5BE7E900709D62 /* ImageCell.h */,
+				A7E941DE1E5BE7E900709D62 /* ImageCell.m */,
 				A7E941A61E5BCD9600709D62 /* Main.storyboard */,
 				A7E941A91E5BCD9600709D62 /* Assets.xcassets */,
 				A7E941AB1E5BCD9600709D62 /* LaunchScreen.storyboard */,
@@ -294,9 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E941A51E5BCD9600709D62 /* ViewController.m in Sources */,
+				A7E941DF1E5BE7E900709D62 /* ImageCell.m in Sources */,
 				A7E941A21E5BCD9600709D62 /* AppDelegate.m in Sources */,
 				A7E941D21E5BCE0F00709D62 /* XGScrollView.m in Sources */,
 				A7E9419F1E5BCD9600709D62 /* main.m in Sources */,
+				A7E941DC1E5BE7C400709D62 /* XGCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
