@@ -27,7 +27,7 @@
     
     
     UIImage * image1 = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1.jpeg" ofType:nil]];
-
+    
     
     if (!image1) {
         NSLog(@"文件不存在");

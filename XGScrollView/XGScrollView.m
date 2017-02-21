@@ -36,6 +36,11 @@
             self.duration = duration;
         }
         
+        if (!placeHolder) {
+            NSLog(@"Error: placeHolder __nonnull");
+        }
+        
+        
         
         
         self.imageUrls = imageUrls;
