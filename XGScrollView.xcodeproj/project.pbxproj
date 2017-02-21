@@ -17,8 +17,6 @@
 		A7E941B81E5BCD9600709D62 /* XGScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941B71E5BCD9600709D62 /* XGScrollViewTests.m */; };
 		A7E941C31E5BCD9600709D62 /* XGScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941C21E5BCD9600709D62 /* XGScrollViewUITests.m */; };
 		A7E941D21E5BCE0F00709D62 /* XGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941D11E5BCE0F00709D62 /* XGScrollView.m */; };
-		A7E941D61E5BD42A00709D62 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D31E5BD42A00709D62 /* 3.jpeg */; };
-		A7E941D71E5BD42A00709D62 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D41E5BD42A00709D62 /* 2.jpeg */; };
 		A7E941D81E5BD42A00709D62 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E941D51E5BD42A00709D62 /* 1.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +57,6 @@
 		A7E941C41E5BCD9600709D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E941D01E5BCE0F00709D62 /* XGScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGScrollView.h; sourceTree = "<group>"; };
 		A7E941D11E5BCE0F00709D62 /* XGScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGScrollView.m; sourceTree = "<group>"; };
-		A7E941D31E5BD42A00709D62 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
-		A7E941D41E5BD42A00709D62 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		A7E941D51E5BD42A00709D62 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		BD2878F86A2DBBE886E792EE /* libPods-XGScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XGScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA722822D1076ED37CDC8179 /* Pods-XGScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,8 +140,6 @@
 				A7E941A91E5BCD9600709D62 /* Assets.xcassets */,
 				A7E941AB1E5BCD9600709D62 /* LaunchScreen.storyboard */,
 				A7E941AE1E5BCD9600709D62 /* Info.plist */,
-				A7E941D31E5BD42A00709D62 /* 3.jpeg */,
-				A7E941D41E5BD42A00709D62 /* 2.jpeg */,
 				A7E941D51E5BD42A00709D62 /* 1.jpeg */,
 				A7E9419D1E5BCD9600709D62 /* Supporting Files */,
 			);
@@ -290,10 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E941D71E5BD42A00709D62 /* 2.jpeg in Resources */,
 				A7E941D81E5BD42A00709D62 /* 1.jpeg in Resources */,
 				A7E941AD1E5BCD9600709D62 /* LaunchScreen.storyboard in Resources */,
-				A7E941D61E5BD42A00709D62 /* 3.jpeg in Resources */,
 				A7E941AA1E5BCD9600709D62 /* Assets.xcassets in Resources */,
 				A7E941A81E5BCD9600709D62 /* Main.storyboard in Resources */,
 			);
@@ -471,6 +463,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT} /**";
 			};
 			name = Debug;
 		};
@@ -512,6 +505,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT} /**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

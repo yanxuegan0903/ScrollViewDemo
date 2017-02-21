@@ -10,7 +10,6 @@
 
 @interface XGScrollView : UIScrollView
 
-- (instancetype)initWithFrame:(CGRect)frame images:(NSArray <UIImage *>*)images;
-
+- (instancetype)initWithFrame:(CGRect)frame Images:(NSArray<NSString*> *)imageUrls placeHolder:(UIImage *)placeHolder;
 
 @end
