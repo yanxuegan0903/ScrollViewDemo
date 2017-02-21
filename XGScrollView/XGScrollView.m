@@ -15,6 +15,9 @@
 @property (nonatomic, strong) NSArray<NSString *> *imageUrls;
 @property (nonatomic, strong) UIImage *placeHolder;
 @property (nonatomic, strong) NSTimer *timer;
+@property(nonatomic,assign)CGFloat duration;
+
+
 
 @end
 
@@ -22,10 +25,18 @@
 @implementation XGScrollView
 
 
-- (instancetype)initWithFrame:(CGRect)frame Images:(NSArray<NSString*> *)imageUrls placeHolder:(UIImage *)placeHolder
+- (instancetype)initWithFrame:(CGRect)frame Images:(NSArray<NSString*> *)imageUrls placeHolder:(UIImage *)placeHolder duration:(CGFloat)duration
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        if (!duration || duration <= 0) {
+            self.duration = 3.0;
+        }else{
+            self.duration = duration;
+        }
+        
+        
         
         self.imageUrls = imageUrls;
         self.placeHolder = placeHolder;
@@ -82,7 +93,7 @@
 
 - (void) addTimer{
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
     
