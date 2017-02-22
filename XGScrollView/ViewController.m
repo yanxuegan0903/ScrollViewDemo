@@ -38,6 +38,7 @@
         return;
     }
     
+    //  使用 collectionView
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(800, 450);
@@ -46,9 +47,11 @@
     
     XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, 800, 450) collectionViewLayout:layout imageUrls:@[image_url1,image_url2,image_url3]];
     [self.view addSubview:collectionView];
+    self.collectionView = collectionView;
     
     
     
+    //  使用 ScrollView
 //    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, 400, 300) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:1.0];
 //    
 //    [scrollView start];
@@ -63,11 +66,21 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
  
-    if (self.scrollView.isRuning) {
-        [self.scrollView stop];
+    //  使用 ScrollView
+//    if (self.scrollView.isRuning) {
+//        [self.scrollView stop];
+//    }else{
+//        [self.scrollView start];
+//    }
+    
+    
+    if (self.collectionView.isRuning) {
+        [self.collectionView stop];
     }else{
-        [self.scrollView start];
+        [self.collectionView start];
     }
+    
+    
     
     
 }

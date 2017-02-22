@@ -10,6 +10,14 @@
 
 @interface XGCollectionView : UICollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(nonnull UICollectionViewLayout *)layout imageUrls:(NSArray<NSString *> *)imageUrls;
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:( UICollectionViewLayout * _Nonnull )layout imageUrls:(NSArray<NSString *> *)imageUrls;
+
+
+- (void)start;
+
+- (void)stop;
+
+@property(nonatomic,assign)BOOL isRuning;
+
 
 @end

@@ -81,9 +81,7 @@
 
 - (void)setRow:(int)row{
     _row = row;
-    
-    NSLog(@"设置Row");
-    
+        
     self.label.text = [NSString stringWithFormat:@"%d",row];
     
 }
