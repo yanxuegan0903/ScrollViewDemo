@@ -25,6 +25,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
+    
     NSString *image_url1 = @"http://s1.uuioe.net:4888/75e977fdcc04ed878de7e015658bcdfe";
     NSString *image_url2 = @"http://s1.uuioe.net:4888/b633a05628f2f4560f95dba9b828db54";
     NSString *image_url3 = @"http://s1.uuioe.net:4888/a05c8d2ff7acd05715b913010c6babec";

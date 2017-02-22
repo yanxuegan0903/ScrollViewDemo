@@ -45,7 +45,6 @@
         
         self.delegate = self;
         self.dataSource = self;
-        
         if (imageUrls.count == 1) {
             [self setScrollEnabled:NO];
         }
