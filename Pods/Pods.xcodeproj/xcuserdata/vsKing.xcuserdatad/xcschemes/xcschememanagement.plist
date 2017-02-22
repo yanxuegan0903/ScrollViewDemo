@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-XGScrollView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,16 +22,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3455EB1A757F71C39B0469F233CE8458</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>48386A3C6D10978304019C11058891E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79B873F70D6431E1696B89296121A4F2</key>
 		<dict>
 			<key>primary</key>

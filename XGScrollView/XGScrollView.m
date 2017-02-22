@@ -111,7 +111,7 @@
 
 
 - (void) addTimer{
-    
+        
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];

@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import "XGScrollView.h"
-
+#import "XGCollectionView.h"
 
 
 @interface ViewController ()
 
 @property (nonatomic, strong) XGScrollView *scrollView;
+@property (nonatomic, strong) XGCollectionView *collectionView;
+
 
 @end
 
@@ -36,15 +38,24 @@
         return;
     }
     
+    UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.itemSize = CGSizeMake(800, 450);
+    layout.minimumInteritemSpacing = 0;
+    layout.minimumLineSpacing = 0;
+    
+    XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, 800, 450) collectionViewLayout:layout imageUrls:@[image_url1,image_url2,image_url3]];
+    [self.view addSubview:collectionView];
     
     
-    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, 400, 300) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:1.0];
     
-    [scrollView start];
-    
-    [self.view addSubview:scrollView];
-    
-    self.scrollView = scrollView;
+//    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, 400, 300) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:1.0];
+//    
+//    [scrollView start];
+//    
+//    [self.view addSubview:scrollView];
+//    
+//    self.scrollView = scrollView;
     
     
     

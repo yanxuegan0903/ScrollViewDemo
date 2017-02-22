@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '48386A3C6D10978304019C11058891E0'
+               BlueprintIdentifier = 'F6558494A022429073794860B61CA051'
                BlueprintName = 'Pods-XGScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-XGScrollView.a'>
