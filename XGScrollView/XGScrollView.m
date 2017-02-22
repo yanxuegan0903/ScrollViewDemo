@@ -84,11 +84,28 @@
     self.delegate = self;
     
     
+//    if ([self.imageUrls count] > 1) {
+//        [self addTimer];
+//    }
+    
+    
+}
+
+
+- (void)start{
+    
+    self.isRuning = YES;
     if ([self.imageUrls count] > 1) {
         [self addTimer];
     }
-    
-    
+}
+
+- (void)stop{
+    self.isRuning = NO;
+    if ([self.imageUrls count] > 1) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
 

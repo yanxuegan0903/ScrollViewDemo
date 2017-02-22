@@ -13,6 +13,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) XGScrollView *scrollView;
+
 @end
 
 @implementation ViewController
@@ -36,13 +38,29 @@
     
     
     
-    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width * (775/1080)) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:0.5];
+    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, 400, 300) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:1.0];
+    
+    [scrollView start];
+    
     [self.view addSubview:scrollView];
     
+    self.scrollView = scrollView;
     
     
     
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+ 
+    if (self.scrollView.isRuning) {
+        [self.scrollView stop];
+    }else{
+        [self.scrollView start];
+    }
+    
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning {

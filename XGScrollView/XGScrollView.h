@@ -12,6 +12,12 @@
 
 - (instancetype)initWithFrame:(CGRect)frame Images:(NSArray<NSString*> *)imageUrls placeHolder:(UIImage *)placeHolder duration:(CGFloat)duration;
 
+- (void)start;
+- (void)stop;
+
+@property(nonatomic,assign)BOOL isRuning;
+
+
 
 
 @end
