@@ -13,7 +13,7 @@
 @interface ImageCell ()
 
 @property (nonatomic, strong) UIImageView *imageView;
-
+@property (nonatomic, strong) UILabel *label;
 
 @end
 
@@ -42,6 +42,16 @@
     self.imageView = imageView;
     
     
+    UILabel * label = [UILabel new];
+    label.backgroundColor = [UIColor greenColor];
+    label.textColor = [UIColor redColor];
+    label.font = [UIFont systemFontOfSize:24];
+    label.text = @"NNN";
+    label.textAlignment = NSTextAlignmentCenter;
+    [label sizeToFit];
+    [self addSubview:label];
+    self.label = label;
+    
 }
 
 - (void)layoutSubviews{
@@ -50,6 +60,13 @@
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+    
+    
+    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
     
 }
@@ -61,6 +78,15 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:_placeHolder];
 }
 
+
+- (void)setRow:(int)row{
+    _row = row;
+    
+    NSLog(@"设置Row");
+    
+    self.label.text = [NSString stringWithFormat:@"%d",row];
+    
+}
 
 
 

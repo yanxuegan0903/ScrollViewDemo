@@ -14,5 +14,9 @@
 
 @property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) UIImage *placeHolder;
+@property(nonatomic,assign)int row;
+
+
+
 
 @end

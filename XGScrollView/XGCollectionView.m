@@ -62,13 +62,10 @@
     
     ImageCell * cell = [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ImageCell class]) forIndexPath:indexPath];
     cell.placeHolder = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1.jpeg" ofType:nil]];
-    
+    cell.row = (int)indexPath.row;
     if (indexPath.row == 0) {
         //  第一个cell 显示最后一张图
-        
         cell.imageUrl = [self.imageUrls objectAtIndex:[self.imageUrls count] -1];
-        
-        
     }else if (indexPath.row == [self.imageUrls count] +1){
         //  最后一个cell 显示第一张图
         cell.imageUrl = [self.imageUrls objectAtIndex:0];
@@ -77,7 +74,7 @@
         //  中间的cell
         cell.imageUrl = [self.imageUrls objectAtIndex:indexPath.row -1];
     }
-        
+    
     return cell;
 }
 
