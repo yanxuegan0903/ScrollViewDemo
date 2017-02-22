@@ -48,8 +48,8 @@
     XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, 800, 450) collectionViewLayout:layout imageUrls:@[image_url1,image_url2,image_url3] placeHolder:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"jpeg"] duration:2.0f];
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
-    
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    collectionView.backgroundColor = [UIColor grayColor];
     
     //  使用 ScrollView
 //    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, 400, 300) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:1.0];

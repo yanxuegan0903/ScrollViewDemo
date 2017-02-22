@@ -25,6 +25,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        
+        
+        NSLog(@"frame ===== %@",NSStringFromCGRect(frame));
+        
         self.backgroundColor = [UIColor redColor];
         
         [self initUI];
