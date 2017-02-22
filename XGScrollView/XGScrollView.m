@@ -58,22 +58,19 @@
 - (void)initInterNetUI{
     
     //第一张图片(向前拖拽，为了循环，第一张图应该和显示的最后一张图一样)
-    UIImageView *firstImage = [UIImageView new];
+    UIImageView *firstImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [firstImage sd_setImageWithURL:[NSURL URLWithString:[self.imageUrls lastObject]] placeholderImage:_placeHolder];
-    firstImage.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addSubview:firstImage];
     
     //最后一张图片(向后拖拽，为了循环，最后一张图应该和显示的第一张图一样)
-    UIImageView *lastImage = [UIImageView new];
-    [firstImage sd_setImageWithURL:[NSURL URLWithString:[self.imageUrls firstObject]] placeholderImage:_placeHolder];
-    lastImage.frame = CGRectMake(([self.imageUrls count] + 1) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
+    UIImageView *lastImage = [[UIImageView alloc] initWithFrame:CGRectMake(([self.imageUrls count] + 1) * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    [lastImage sd_setImageWithURL:[NSURL URLWithString:[self.imageUrls firstObject]] placeholderImage:_placeHolder];
     [self addSubview:lastImage];
     
     //第二张图 → 倒数第二张图
     for (NSInteger i = 0; i < [self.imageUrls count]; i++) {
-        UIImageView *imageView = [UIImageView new];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width * (i + 1), 0, self.frame.size.width, self.frame.size.height)];
         [imageView sd_setImageWithURL:[NSURL URLWithString:[self.imageUrls objectAtIndex:i]] placeholderImage:_placeHolder];
-        imageView.frame = CGRectMake(self.frame.size.width * (i + 1), 0, self.frame.size.width, self.frame.size.height);
         [self addSubview:imageView];
     }
     
