@@ -103,7 +103,7 @@
 
 - (void)nextPage{
    
-    [self scrollRectToVisible:CGRectMake(self.contentOffset.x + self.frame.size.width , 0, self.frame.size.width, self.frame.size.width) animated:YES];
+    [self setContentOffset:CGPointMake(self.contentOffset.x + self.frame.size.width, 0) animated:YES];
     
     
 }

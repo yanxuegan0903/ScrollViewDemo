@@ -36,7 +36,7 @@
     
     
     
-    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:0.5];
+    XGScrollView * scrollView = [[XGScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width * (775/1080)) Images:@[image_url1,image_url2,image_url3] placeHolder:image1 duration:0.5];
     [self.view addSubview:scrollView];
     
     
