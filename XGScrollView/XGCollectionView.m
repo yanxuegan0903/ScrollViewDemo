@@ -16,6 +16,10 @@
 
 @property (nonatomic, strong) NSTimer *timer;
 
+@property (nonatomic, strong) NSString *placeHolder;
+@property(nonatomic,assign)CGFloat duration;
+
+
 @end
 
 
@@ -24,13 +28,14 @@
 
 
 
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout imageUrls:(NSArray<NSString *> *)imageUrls
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout imageUrls:(NSArray<NSString *> *)imageUrls placeHolder:(NSString *)placeHolder duration:(CGFloat)duration
 {
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
         
         _imageUrls = imageUrls;
-        
+        self.placeHolder = placeHolder;
+        self.duration = duration;
         
         [self registerClass:[ImageCell class] forCellWithReuseIdentifier:NSStringFromClass([ImageCell class])];
         self.pagingEnabled = YES;
@@ -69,7 +74,7 @@
 
 - (void) addTimer{
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
     
@@ -111,8 +116,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ImageCell * cell = [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ImageCell class]) forIndexPath:indexPath];
-    cell.placeHolder = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1.jpeg" ofType:nil]];
-    cell.row = (int)indexPath.row;
+    cell.placeHolder = [UIImage imageWithContentsOfFile:self.placeHolder];
     if (indexPath.row == 0) {
         //  第一个cell 显示最后一张图
         cell.imageUrl = [self.imageUrls objectAtIndex:[self.imageUrls count] -1];

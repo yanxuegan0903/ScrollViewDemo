@@ -10,7 +10,7 @@
 
 @interface XGCollectionView : UICollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:( UICollectionViewLayout * _Nonnull )layout imageUrls:(NSArray<NSString *> *)imageUrls;
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:( UICollectionViewLayout * _Nonnull )layout imageUrls:(NSArray<NSString *> *)imageUrls placeHolder:(NSString*)placeHolder duration:(CGFloat)duration;
 
 
 - (void)start;

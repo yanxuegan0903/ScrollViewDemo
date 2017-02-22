@@ -45,7 +45,7 @@
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = 0;
     
-    XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, 800, 450) collectionViewLayout:layout imageUrls:@[image_url1,image_url2,image_url3]];
+    XGCollectionView * collectionView = [[XGCollectionView alloc] initWithFrame:CGRectMake(0, 0, 800, 450) collectionViewLayout:layout imageUrls:@[image_url1,image_url2,image_url3] placeHolder:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"jpeg"] duration:2.0f];
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
     
