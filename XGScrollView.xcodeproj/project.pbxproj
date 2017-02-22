@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B054E16278153E2C02DBED8 /* libPods-XGScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2878F86A2DBBE886E792EE /* libPods-XGScrollView.a */; };
+		A7E284611E5D71FB00A6FA5C /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E2845F1E5D71FB00A6FA5C /* 2.jpeg */; };
+		A7E284621E5D71FB00A6FA5C /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7E284601E5D71FB00A6FA5C /* 3.jpeg */; };
 		A7E9419F1E5BCD9600709D62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9419E1E5BCD9600709D62 /* main.m */; };
 		A7E941A21E5BCD9600709D62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941A11E5BCD9600709D62 /* AppDelegate.m */; };
 		A7E941A51E5BCD9600709D62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E941A41E5BCD9600709D62 /* ViewController.m */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		999ECF0170CC9826161F7296 /* Pods-XGScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-XGScrollView/Pods-XGScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		A7E2845F1E5D71FB00A6FA5C /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		A7E284601E5D71FB00A6FA5C /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		A7E9419A1E5BCD9600709D62 /* XGScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XGScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9419E1E5BCD9600709D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7E941A01E5BCD9600709D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				A7E941AB1E5BCD9600709D62 /* LaunchScreen.storyboard */,
 				A7E941AE1E5BCD9600709D62 /* Info.plist */,
 				A7E941D51E5BD42A00709D62 /* 1.jpeg */,
+				A7E2845F1E5D71FB00A6FA5C /* 2.jpeg */,
+				A7E284601E5D71FB00A6FA5C /* 3.jpeg */,
 				A7E9419D1E5BCD9600709D62 /* Supporting Files */,
 			);
 			path = XGScrollView;
@@ -284,8 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E284611E5D71FB00A6FA5C /* 2.jpeg in Resources */,
 				A7E941D81E5BD42A00709D62 /* 1.jpeg in Resources */,
 				A7E941AD1E5BCD9600709D62 /* LaunchScreen.storyboard in Resources */,
+				A7E284621E5D71FB00A6FA5C /* 3.jpeg in Resources */,
 				A7E941AA1E5BCD9600709D62 /* Assets.xcassets in Resources */,
 				A7E941A81E5BCD9600709D62 /* Main.storyboard in Resources */,
 			);
